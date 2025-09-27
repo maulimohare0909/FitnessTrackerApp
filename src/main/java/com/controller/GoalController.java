@@ -24,18 +24,19 @@ import com.service.GoalService;
 public class GoalController {
 	
 	
-	/*
-	 * @Autowired GoalService goalService;
-	 */
+	
+	  @Autowired 
+	  GoalService goalService;
+	 
 	 
 	
 	
-	  private final GoalService goalService;
-	  
-	  public GoalController(GoalService goalService) 
-	  { 
-		  this.goalService = goalService; 
-	  }
+	/*
+	 * private final GoalService goalService;
+	 * 
+	 * public GoalController(GoalService goalService) { this.goalService =
+	 * goalService; }
+	 */
 	 
 	
 	@PostMapping("/savegoal")
