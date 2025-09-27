@@ -23,15 +23,20 @@ import com.service.GoalService;
 @RequestMapping("api/goals")
 public class GoalController {
 	
+	
 	/*
 	 * @Autowired GoalService goalService;
 	 */
+	 
 	
-	private final GoalService goalService;
-
-	public GoalController(GoalService goalService) {
-	    this.goalService = goalService;
-	}
+	
+	  private final GoalService goalService;
+	  
+	  public GoalController(GoalService goalService) 
+	  { 
+		  this.goalService = goalService; 
+	  }
+	 
 	
 	@PostMapping("/savegoal")
 	public ResponseEntity<Goal> saveUserGoal(@RequestBody Goal goal)

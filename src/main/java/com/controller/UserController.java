@@ -1,5 +1,4 @@
 package com.controller;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,21 +23,18 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
-	
-	
+
 	@PostMapping("/register")
 	public ResponseEntity<User> registerUser(@RequestBody User user)
 	{
 		return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user));
 	}
 	
-	
 	@GetMapping("find/{username}")
     public User getUserByUsername(@PathVariable String username) {
 		
         return userService.findByUsername(username);
     }
-	
 	
 	@GetMapping("get/{id}")
     public ResponseEntity<?> getUserById(@PathVariable Long id) {
